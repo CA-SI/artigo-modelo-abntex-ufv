@@ -51,7 +51,7 @@
 \renewcommand{\maketitlehookd}{%
 	\vspace{\onelineskip}
 	\begin{resumoumacoluna}
-		Trabalhos acadêmicos brasileiros seguem as normas da Associação Brasileira de Normas Técnicas, entre elas a NBR 6023, de referências, revista em 2018, e a NBR 10520, de citações, revista em 2023. Modelos \LaTeX\ costumam implementar uma única edição dessas normas, e a troca de edição exige substituir o sistema bibliográfico e reescrever os comandos de citação. Este artigo apresenta um projeto de código aberto, derivado de um modelo de trabalho de conclusão de curso da Universidade Federal de Viçosa, que reúne três contribuições: um pacote de estilo sobre a classe abn\TeX2 com uma opção para escolher a edição das normas de citação e referência, de modo que o mesmo texto compile segundo as edições de 2002, segundo a NBR 6023:2018 com a NBR 10520:2002 ou segundo as edições vigentes; um guia-modelo em que cada capítulo explica uma parte do trabalho acadêmico e demonstra no próprio código como produzi-la; e um processo de compilação, verificação e distribuição que gera um pacote pronto para cada edição. A verificação compilou os dois modelos nas três configurações sem citações indefinidas e confirmou, nos documentos gerados, as diferenças previstas entre as edições, como a grafia do autor nas citações e a apresentação de endereços eletrônicos nas referências.
+		Trabalhos acadêmicos brasileiros seguem as normas da Associação Brasileira de Normas Técnicas, entre elas a NBR 6023, de referências, revista em 2018 e em 2025, e a NBR 10520, de citações, revista em 2023. Modelos \LaTeX\ costumam implementar uma única edição dessas normas, e a troca de edição exige substituir o sistema bibliográfico e reescrever os comandos de citação. Este artigo apresenta um projeto de código aberto, derivado de um modelo de trabalho de conclusão de curso da Universidade Federal de Viçosa, que reúne três contribuições: um pacote de estilo sobre a classe abn\TeX2 com uma opção para escolher a edição das normas de citação e referência, de modo que o mesmo texto compile segundo as edições de 2002, segundo a NBR 6023:2018 com a NBR 10520:2002 ou segundo a NBR 6023:2018 com a NBR 10520:2023; um guia-modelo em que cada capítulo explica uma parte do trabalho acadêmico e demonstra no próprio código como produzi-la; e um processo de compilação, verificação e distribuição que gera um pacote pronto para cada edição. A verificação compilou os dois modelos nas três configurações sem citações indefinidas e confirmou, nos documentos gerados, as diferenças previstas entre as edições, como a grafia do autor nas citações e a apresentação de endereços eletrônicos nas referências.
 
 		\vspace{\onelineskip}
 		\noindent
@@ -60,7 +60,7 @@
 
 	\begin{otherlanguage*}{english}
 	\begin{resumoumacoluna}[Abstract]
-		Brazilian academic works follow the standards of the Brazilian Association of Technical Standards (ABNT), including NBR 6023, on references, revised in 2018, and NBR 10520, on citations, revised in 2023. \LaTeX\ templates usually implement a single edition of these standards, and switching editions requires replacing the bibliography system and rewriting citation commands. This article presents an open-source project, derived from an undergraduate thesis template of the Federal University of Viçosa, with three contributions: a style package built on the abn\TeX2 class with an option to choose the edition of the citation and reference standards, so that the same text compiles according to the 2002 editions, to NBR 6023:2018 with NBR 10520:2002, or to the current editions; a guide-template in which each chapter explains one part of an academic work and shows in its own source code how to produce it; and a build, verification and distribution process that generates a ready-to-use package for each edition. The verification compiled both templates in the three configurations with no undefined citations and confirmed, in the generated documents, the expected differences between editions, such as the spelling of authors in citations and the presentation of web addresses in references.
+		Brazilian academic works follow the standards of the Brazilian Association of Technical Standards (ABNT), including NBR 6023, on references, revised in 2018 and 2025, and NBR 10520, on citations, revised in 2023. \LaTeX\ templates usually implement a single edition of these standards, and switching editions requires replacing the bibliography system and rewriting citation commands. This article presents an open-source project, derived from an undergraduate thesis template of the Federal University of Viçosa, with three contributions: a style package built on the abn\TeX2 class with an option to choose the edition of the citation and reference standards, so that the same text compiles according to the 2002 editions, to NBR 6023:2018 with NBR 10520:2002, or to NBR 6023:2018 with NBR 10520:2023; a guide-template in which each chapter explains one part of an academic work and shows in its own source code how to produce it; and a build, verification and distribution process that generates a ready-to-use package for each edition. The verification compiled both templates in the three configurations with no undefined citations and confirmed, in the generated documents, the expected differences between editions, such as the spelling of authors in citations and the presentation of web addresses in references.
 
 		\vspace{\onelineskip}
 		\noindent
@@ -82,7 +82,7 @@
 
 A apresentação de trabalhos acadêmicos no Brasil é regida por um conjunto de normas da Associação Brasileira de Normas Técnicas (ABNT). A NBR 14724 define a estrutura de teses, dissertações e trabalhos de conclusão de curso \cite{abnt14724}; a NBR 6023, a elaboração de referências \cite{abnt6023}; e a NBR 10520, a apresentação de citações \cite{abnt10520}. Completam o conjunto normas sobre numeração progressiva \cite{abnt6024}, sumário \cite{abnt6027} e resumo \cite{abnt6028}.
 
-Duas dessas normas foram revistas recentemente. A NBR 6023 teve nova edição em 2018, que substituiu a de 2002 \cite{abnt6023-2002}, e a NBR 10520 teve nova edição em 2023, que substituiu a de 2002 \cite{abnt10520-2002}. Durante a transição entre edições, convivem exigências diferentes: cursos, programas e orientadores podem adotar a edição vigente, manter a anterior ou combinar a NBR 6023 de 2018 com a NBR 10520 de 2002, situação que perdurou de 2018 a 2023.
+Três dessas normas foram revistas recentemente. A NBR 6023 teve novas edições em 2018, que substituiu a de 2002 \cite{abnt6023-2002}, e em 2025 \cite{abnt6023-2025}; a NBR 10520 teve nova edição em 2023, que substituiu a de 2002 \cite{abnt10520-2002}; e a NBR 14724 teve nova edição em 2024. Durante a transição entre edições, convivem exigências diferentes: cursos, programas e orientadores podem adotar a edição vigente, manter a anterior ou combinar a NBR 6023 de 2018 com a NBR 10520 de 2002, situação que perdurou de 2018 a 2023.
 
 O \LaTeX\ \cite{lamport1994}, construído sobre o \TeX\ \cite{knuth1984texbook}, é usado na escrita acadêmica porque separa o conteúdo da formatação e gera automaticamente numeração, sumário, listas, citações e referências \cite{mittelbach2004}. No Brasil, a classe abn\TeX2 \cite{abntex2classe,ctan-abntex2} implementa as normas da ABNT para trabalhos acadêmicos. As citações e referências, porém, dependem de um sistema bibliográfico à parte, e cada sistema disponível implementa edições diferentes das normas. Um modelo que adota um deles fica preso às edições que ele implementa.
 
@@ -106,7 +106,9 @@ A \autoref{sec:fundamentacao} apresenta as normas envolvidas e as ferramentas so
 
 A NBR 10520 define os sistemas de chamada das citações e a forma de indicar autor, data e página. A principal mudança da edição de 2023 em relação à de 2002 está na grafia do autor dentro dos parênteses: na edição de 2002, o sobrenome é escrito em letras maiúsculas, como em (SILVA, 2020); na de 2023, em maiúsculas e minúsculas, como em (Silva, 2020), da mesma forma que fora dos parênteses \cite{abnt10520,abnt10520-2002}.
 
-A NBR 6023 define os elementos e a ordem de apresentação das referências. Entre as diferenças visíveis da edição de 2018 em relação à de 2002 estão a forma das expressões para local e editora não identificados, que passam de [S.l.] e [s.n.] para \textit{[S. l.]} e \textit{[s. n.]}, e a apresentação do endereço eletrônico, que deixa de ser escrito entre os sinais \texttt{< >} \cite{abnt6023,abnt6023-2002}.
+A NBR 6023 define os elementos e a ordem de apresentação das referências. Entre as diferenças visíveis da edição de 2018 em relação à de 2002 estão a forma das expressões para local e editora não identificados, que passam de [S.l.] e [s.n.] para \textit{[S. l.]} e \textit{[s. n.]}, e a apresentação do endereço eletrônico, que deixa de ser escrito entre os sinais \texttt{< >} \cite{abnt6023,abnt6023-2002}. A edição de 2025 alterou pontos específicos: os elementos das referências de coleções e fascículos de periódicos, de artigos eletrônicos, com a inclusão da e-localização, de eventos no todo e de jurisprudência \cite{abnt6023-2025}.
+
+A NBR 14724, revista em 2024, manteve as regras de margens, fonte, espaçamento e paginação, e passou a determinar que o trabalho acadêmico seja organizado em seções, e não em capítulos \cite{abnt14724}.
 
 \subsection{Ferramentas}
 
@@ -114,7 +116,7 @@ No \LaTeX, as referências são cadastradas em um arquivo no formato Bib\TeX, e 
 
 \begin{alineas}
 	\item o pacote \texttt{abntex2cite} \cite{abntex2cite}, distribuído com a classe, que usa o programa Bib\TeX\ e implementa a NBR 6023 e a NBR 10520 de 2002;
-	\item o pacote \texttt{biblatex} \cite{biblatex}, com o estilo \texttt{biblatex-abnt} \cite{biblatexabnt} e o programa Biber \cite{biber}; a versão 4.0 desse estilo implementa a NBR 6023:2018 e a NBR 10520:2023, e oferece a opção \texttt{accite}, que escreve o autor em maiúsculas nas citações, como na edição de 2002 da NBR 10520.
+	\item o pacote \texttt{biblatex} \cite{biblatex}, com o estilo \texttt{biblatex-abnt} \cite{biblatexabnt} e o programa Biber \cite{biber}; a versão 4.0 desse estilo implementa a NBR 6023:2018 e a NBR 10520:2023, mas não as alterações da NBR 6023:2025, e oferece a opção \texttt{accite}, que escreve o autor em maiúsculas nas citações, como na edição de 2002 da NBR 10520.
 \end{alineas}
 
 As duas pilhas diferem nos comandos de citação: o \texttt{abntex2cite} oferece \verb|\citeonline| para a citação com o autor integrado ao texto, e o \texttt{biblatex-abnt}, \verb|\textcite|. Também diferem no programa executado entre as compilações e na forma de declarar o arquivo de referências.
@@ -150,7 +152,7 @@ A \autoref{fig:arquitetura} resume a organização do projeto. O pacote de estil
 		\draw[seta] (unico.east) -- (latexmk.south west);
 		\draw[seta] (latexmk) -- node[rotulo, right=1mm] {\texttt{make dist}} (dist);
 	\end{tikzpicture}
-	\fonte{Elaborado pelo autor.}
+	\fonte{Elaborado pelo próprio autor.}
 \end{figure}
 
 \subsection{Seleção da edição}
@@ -170,7 +172,7 @@ O pacote \texttt{abntex2-UFV} recebe a opção \texttt{abnt}, com três valores.
 		\texttt{2002} & NBR 10520:2002 & NBR 6023:2002 & \texttt{abntex2cite} e Bib\TeX \\
 		\bottomrule
 	\end{tabular}
-	\fonte{Elaborado pelo autor.}
+	\fonte{Elaborado pelo próprio autor.}
 \end{quadro}
 
 Para que o mesmo texto compile com qualquer valor, o pacote oferece uma interface comum. No preâmbulo, \verb|\arquivoreferencias| declara a base de referências; nos elementos pós-textuais, \verb|\imprimirreferencias| imprime a lista. Na pilha \texttt{biblatex}, o pacote define \verb|\citeonline| e \verb|\apudonline| como sinônimos dos comandos equivalentes do \texttt{biblatex-abnt}, e os comandos \verb|\cite| e \verb|\apud| têm a mesma sintaxe nas duas pilhas. Um documento escrito para o \texttt{abntex2cite} passa, assim, a compilar também nas edições de 2018 e 2023. O uso no documento se reduz a:
@@ -211,7 +213,7 @@ O alvo \texttt{dist} gera, para cada modelo e cada edição, um arquivo compacta
 \section{Verificação}\label{sec:verificacao}
 % ----------------------------------------------------------
 
-A verificação foi feita com o \TeX\ Live 2026, \texttt{latexmk} 4.88, \texttt{biblatex} 3.21, Biber 2.21, \texttt{biblatex-abnt} 4.0 e abn\TeX2 1.9.7. Os dois modelos foram compilados nas três configurações, num total de seis documentos, com 39 ou 40 páginas cada. Em todos, o registro de compilação não apresentou citações ou referências cruzadas indefinidas nem linhas que ultrapassam a margem, e a compilação com uma edição inexistente foi interrompida pelo erro do pacote.
+A verificação foi feita com o \TeX\ Live 2026, \texttt{latexmk} 4.88, \texttt{biblatex} 3.21, Biber 2.21, \texttt{biblatex-abnt} 4.0 e abn\TeX2 1.9.7. Os dois modelos foram compilados nas três configurações, num total de seis documentos, com 40 páginas cada. Em todos, o registro de compilação não apresentou citações ou referências cruzadas indefinidas nem linhas que ultrapassam a margem, e a compilação com uma edição inexistente foi interrompida pelo erro do pacote.
 
 Para conferir se a opção produz as diferenças previstas pelas normas, foram extraídos dos documentos gerados os mesmos trechos nas três configurações. O \autoref{qua:saidas} reproduz esses trechos.
 
@@ -228,7 +230,7 @@ Para conferir se a opção produz as diferenças previstas pelas normas, foram e
 		\texttt{2023} & (Gil, 2017) & (Knuth, 1984a, p.~97) & \textit{[S. l.: s. n.]}, 2013. Disponível em: \texttt{https://semver.org/lang/pt-BR/}. \\
 		\bottomrule
 	\end{tabular}
-	\fonte{Elaborado pelo autor a partir dos documentos gerados.}
+	\fonte{Elaborado pelo próprio autor a partir dos documentos gerados.}
 \end{quadro}
 
 Os trechos confirmam as diferenças descritas na \autoref{sec:fundamentacao}. A grafia do autor nas citações muda apenas na configuração 2023, que é a única a seguir a NBR 10520:2023. As configurações 2018 e 2023, que seguem a NBR 6023:2018, apresentam o endereço eletrônico sem os sinais \texttt{< >} e indicam local e editora não identificados; a configuração 2002 mantém os sinais.
@@ -239,9 +241,11 @@ A verificação também revelou diferenças que não decorrem das normas, mas da
 \section{Discussão e limitações}\label{sec:discussao}
 % ----------------------------------------------------------
 
-A opção do pacote altera apenas citações e referências. A estrutura e a formatação do trabalho seguem a NBR 14724 de 2011, a numeração progressiva segue a NBR 6024 de 2012, e o layout é o mesmo nas três configurações. A configuração intermediária, que combina a NBR 6023:2018 com a NBR 10520:2002, corresponde ao período entre as duas revisões e atende a regulamentos que ainda o adotam.
+A opção do pacote altera apenas citações e referências. A estrutura e a formatação do trabalho seguem a NBR 14724:2024, cujas regras de layout coincidem com as da edição anterior implementada pela classe abn\TeX2; para atender à exigência de organização em seções, o pacote faz os cabeçalhos e as referências cruzadas dizerem ``Seção'' em vez de ``Capítulo''. A numeração progressiva segue a NBR 6024 de 2012, e o layout é o mesmo nas três configurações. A configuração intermediária, que combina a NBR 6023:2018 com a NBR 10520:2002, corresponde ao período entre as duas revisões e atende a regulamentos que ainda o adotam.
 
 A conformidade das referências com as normas depende dos estilos bibliográficos usados. O projeto não reimplementa as normas; ele seleciona e ajusta implementações existentes. A verificação descrita na \autoref{sec:verificacao} confere, por inspeção dos documentos gerados, um conjunto de diferenças conhecidas entre as edições, e não substitui uma validação sistemática contra o texto das normas. Diferenças entre as implementações, como a atribuição das letras do ano, permanecem nos documentos gerados.
+
+Nenhuma das configurações implementa a NBR 6023:2025. Como as alterações dessa edição se restringem a alguns tipos de documento, o guia indica esses tipos para que o autor confira as referências correspondentes; incorporar a edição de 2025 exige um estilo bibliográfico que a implemente e um novo valor da opção.
 
 Duas dependências merecem registro. A última versão da classe abn\TeX2 e do pacote \texttt{abntex2cite} é de 2018 \cite{ctan-abntex2}, de modo que a configuração 2002 depende de um código sem manutenção ativa. E o pacote \texttt{minted}, usado no guia para o realce de código-fonte, exige o Python instalado, o que acrescenta um requisito para quem compila o modelo localmente; o guia indica como removê-lo quando não for necessário.
 
